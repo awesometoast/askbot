@@ -1,4 +1,4 @@
-# Extremely simply text generation web UI
+# Extremely simple text generation web UI
 
 A python/flask UI for using OpenAI with basic training data. Made for experimentation purposes. Default dataset is the Wikipedia page for Homestar Runner.
 
