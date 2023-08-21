@@ -1,0 +1,11 @@
+langchain
+flask
+llama_index
+gradio
+openai
+pandas
+numpy
+datetime
+plotly
+scipy
+scikit-learn

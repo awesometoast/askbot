@@ -1,0 +1,2 @@
+# Copy this file to `api_key.py` and change this value to your actual API key
+api_key = 'YOUR_KEY'
