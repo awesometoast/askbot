@@ -29,7 +29,9 @@ from langchain.schema import (
     SystemMessage
 )
 
-from langchain import OpenAI, PromptTemplate, LLMChain
+from langchain.llms import OpenAI
+from langchain.chains import LLMChain
+from langchain.prompts import PromptTemplate
 from langchain.text_splitter import CharacterTextSplitter
 from langchain.chains.mapreduce import MapReduceChain
 from langchain.prompts import PromptTemplate

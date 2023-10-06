@@ -43,7 +43,9 @@ from langchain.schema import (
     SystemMessage
 )
 
-from langchain import OpenAI, PromptTemplate, LLMChain
+from langchain.llms import OpenAI
+from langchain.chains import LLMChain
+from langchain.prompts import PromptTemplate
 from langchain.text_splitter import CharacterTextSplitter
 from langchain.chains.mapreduce import MapReduceChain
 from langchain.prompts import PromptTemplate
@@ -54,7 +56,6 @@ llm = ChatOpenAI(temperature=0, model_name="gpt-3.5-turbo")
 def get_embedding(text, model="text-embedding-ada-002"):
     text = text.replace("\n", " ")
     return openai.Embedding.create(input = [text], model=model)['data'][0]['embedding']
-
 
 
 def logic(question):
@@ -91,7 +92,7 @@ def logic(question):
 
     {text}
 
-    """ 
+    """
 
     PROMPT = PromptTemplate(template=prompt_template, input_variables=["text"])
     chain = load_summarize_chain(llm, chain_type="stuff", prompt=PROMPT) # Preparing the LLM
