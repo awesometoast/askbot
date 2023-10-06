@@ -102,7 +102,6 @@ def logic(question):
     return output
 
 
-
-response = logic("when was the first computer made?") # Passing the question to the ChatBot
+response = logic("What is the Flarquizby Toaster?") # Passing the question to the ChatBot
 
 print(response)

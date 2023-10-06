@@ -1,3 +1,4 @@
 api_key.py
 embs*.csv
 __pycache__
+chatbot_docs/post-*.*

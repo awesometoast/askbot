@@ -8,19 +8,23 @@
 
   <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans:400,600" rel="stylesheet">
 
-  <link type="text/css" rel="stylesheet" href="style.css">
+  <link type="text/css" rel="stylesheet" href="static/style.css">
 </head>
 
 <body>
-  <h1>Chatbot</h1>
+  <h1>Askbot</h1>
 
   <div id="chatbox">
   </div>
 
   <span id="loader" class="loader"></span>
 
-  <div id="ib">
-    <input id="userInput" type="text">
+  <div id="input-container">
+    <input
+      type="text"
+      id="user-input"
+      value="What is the Flarquizby Toaster?"
+    >
     <button onclick="sendMessage()" id="send">Send</button>
   </div>
 </body>
@@ -38,7 +42,7 @@ async function sendMessage() {
       var pmv = 'none';
     }
 
-    const userInput = document.getElementById('userInput');
+    const userInput = document.getElementById('user-input');
     const message = userInput.value;
 
     userInput.value = '';

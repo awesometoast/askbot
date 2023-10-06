@@ -43,7 +43,9 @@ from langchain.schema import (
     SystemMessage
 )
 
-from langchain import OpenAI, PromptTemplate, LLMChain
+from langchain.llms import OpenAI
+from langchain.chains import LLMChain
+from langchain.prompts import PromptTemplate
 from langchain.text_splitter import CharacterTextSplitter
 from langchain.chains.mapreduce import MapReduceChain
 from langchain.prompts import PromptTemplate
@@ -101,10 +103,10 @@ def logic(question):
     return output
 
 
-app = Flask(__name__)
+app = Flask(__name__, template_folder="templates", static_folder="static")
 @app.route("/")
 def home():
-    return render_template("bot.html") # Renders the webpage
+    return render_template("webapp.html") # Renders the webpage
 
 @app.route('/chat', methods=['POST']) # Listens to incoming requests
 
