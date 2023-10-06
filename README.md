@@ -1,7 +1,6 @@
 # Extremely simple text generation web UI
 
-A python/flask UI for using OpenAI with basic training data. Made for experimentation purposes. Default dataset is the Wikipedia page for Homestar Runner.
-
+A python/flask UI for using OpenAI with basic training data. Made for experimentation purposes. Default dataset is a fake article about a uniquely named fictional steampunk toaster.
 
 ## Installation
 
@@ -18,4 +17,4 @@ Put .txt files in `chatbot_docs`
 
 Then run `python embeddings.py`
 
-To start the UI, run `python web_app.py` and go to [http://localhost:8001](http://localhost:8001`).
+To start the UI, run `python webapp.py` and go to [http://localhost:8001](http://localhost:8001`).
